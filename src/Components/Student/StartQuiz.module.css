@@ -1,0 +1,177 @@
+/* ✅ General Container */
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* ✅ Quiz Header */
+h3 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+/* ✅ Timer Styling */
+.timer {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ff4757;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ✅ Progress Bar */
+.progressBarWrapper {
+  margin-bottom: 25px;
+}
+
+.progressText {
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.progressBarOuter {
+  width: 100%;
+  height: 16px;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progressBarInner {
+  height: 100%;
+  background: linear-gradient(90deg, #28a745, #20c997);
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* ✅ Question Card */
+.questionCard {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.questionCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ✅ Options */
+.option {
+  display: block;
+  margin: 10px 0;
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+.option:hover {
+  background-color: #e9ecef;
+  border-color: #bbb;
+}
+
+.option.selected {
+  background-color: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+/* ✅ Submit Button */
+.submitBtn {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 18px;
+}
+
+.submitBtn:hover {
+  background: linear-gradient(90deg, #0056b3, #004085);
+  transform: translateY(-2px);
+}
+
+.submitBtn:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .questionCard {
+    padding: 18px;
+  }
+
+  .option {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .submitBtn {
+    font-size: 1rem;
+    padding: 13px;
+  }
+
+  .timer {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .option {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .submitBtn {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .timer {
+    font-size: 1rem;
+  }
+}
+
+
+

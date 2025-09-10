@@ -1,0 +1,247 @@
+/* Dashboard Container */
+.dashboardContainer {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #d3d3d3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sidebar Logo */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+}
+/* Styels For Teacher Dishboard................................................. */
+.navItem2 {   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    color: #000000;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+}
+.navItem2:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.mainContent {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 1260px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Welcome Section */
+.welcomeText {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.role {
+    font-size: 14px;
+    color: gray;
+}
+
+/* Profile Picture */
+.profilePic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Quiz Section  */
+.quizSection {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Quiz Container */
+.quizContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Quiz Card */
+.quizCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    width: 100%; 
+}
+
+/* Horizontal Line Divider */
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+/* Quiz Details (Deadline, Duration, Subject) */
+.quizDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Start Quiz Button */
+.startBtn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.startBtn:hover {
+    background-color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .dashboardContainer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+
+    .mainContent {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profilePic {
+        margin-top: 10px;
+        align-self: flex-end;
+    }
+
+    .quizDetails {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .startQuizBtn {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .mainContent {
+        padding: 10px;
+    }
+
+    .quizCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .quizDetails {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .startQuizBtn {
+        align-self: flex-start;
+        background-color: white;
+    }
+}
+
+

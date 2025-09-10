@@ -1,0 +1,451 @@
+/* Dashboard Container */
+.dashboardContainer {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #d3d3d3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sidebar Logo */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color:black;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    text-decoration: none;
+}
+/* Styles For Teacher Dashboard */
+.navItem2 {   
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.mainContent {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 1260px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Welcome Section */
+.welcomeText {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.role {
+    font-size: 14px;
+    color: gray;
+}
+
+
+/* Quiz Section  */
+.quizSection {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Quiz Container */
+.quizContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Quiz Card */
+.quizCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+}
+
+/* Horizontal Line Divider */
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+/* Quiz Details (Deadline, Duration, Subject) */
+.quizDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Start Quiz Button */
+.startQuizBtn {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.startQuizBtn:hover {
+    background-color: blue;
+}
+
+.linkButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.linkButton:hover {
+  background-color: #333;
+  color: #00d4ff;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.profileWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between image and button */
+}
+
+.profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* Corrected Logout Button */
+.logoutBtn {
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logoutBtn:hover {
+  background-color: #c0392b;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+    .mainContent {
+        padding: 15px;
+    }
+    
+    .quizDetails {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .dashboardContainer {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navItem, .navItem2 {
+        width: auto;
+        min-width: 150px;
+    }
+
+    .mainContent {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .header {
+        flex-direction: row;
+        padding: 10px 15px;
+    }
+
+    .welcomeSection {
+        position: static;
+        transform: none;
+        order: 2;
+        flex: 1;
+        text-align: center;
+    }
+    
+    .headerLogo {
+        order: 1;
+    }
+    
+    .profileLogoutSection {
+        order: 3;
+    }
+
+    .profilePic {
+        margin-top: 0;
+    }
+
+    .quizDetails {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .startQuizBtn {
+        align-self: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    .logo {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .navItem, .navItem2 {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .mainContent {
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .welcomeSection {
+        order: 1;
+    }
+    
+    .headerLogo {
+        order: 2;
+        text-align: center;
+    }
+    
+    .profileLogoutSection {
+        order: 3;
+        justify-content: center;
+    }
+
+    .profileWrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .quizCard {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .quizDetails {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .startQuizBtn {
+        align-self: stretch;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 8px;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navItem, .navItem2 {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 10px;
+    }
+
+    .welcomeText {
+        font-size: 16px;
+    }
+
+    .role {
+        font-size: 12px;
+    }
+
+    .quizCard {
+        padding: 12px;
+    }
+
+    .quizDetails {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .startQuizBtn {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .linkButton {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .logoutBtn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+
+/* Mobile landscape and very small devices */
+@media (max-width: 360px) {
+    .navItem, .navItem2 {
+        font-size: 13px;
+        padding: 6px;
+    }
+    
+    .logo {
+        font-size: 18px;
+    }
+    
+    .welcomeText {
+        font-size: 15px;
+    }
+}
+
+/* Prevent text overflow on small screens */
+.quizDetails > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Ensure proper spacing on all screen sizes */
+.quizSection {
+    overflow: hidden;
+}

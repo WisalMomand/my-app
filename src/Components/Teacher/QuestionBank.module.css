@@ -1,0 +1,279 @@
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  margin-left: 170px;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: calc(100% - 190px); /* Adjusted to account for margin */
+  box-sizing: border-box;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2d2d2d;
+  /* margin-bottom: 5px; */
+}
+
+.title::before {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+.select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.select:hover,
+.select:focus {
+  border-color: #5e60ce;
+  box-shadow: 0 0 0 3px rgba(94, 96, 206, 0.2);
+}
+
+.form {
+  margin-top: 30px;
+  display: grid;
+  gap: 14px;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button {
+  background-color: #5e60ce;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #4e4fcf;
+}
+
+.cancelButton {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table {
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  display: block;
+}
+
+.table th,
+.table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.editBtn,
+.deleteBtn {
+  margin-right: 6px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.editBtn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.deleteBtn {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 150px;
+    width: calc(100% - 170px);
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    margin: 30px auto;
+    margin-left: 120px;
+    width: calc(100% - 140px);
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .title::before {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 25px 15px;
+    width: calc(100% - 30px);
+    padding: 18px;
+  }
+  
+  .title {
+    font-size: 22px;
+  }
+  
+  .title::before {
+    font-size: 22px;
+  }
+  
+  .table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin: 20px 10px;
+    width: calc(100% - 20px);
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .title::before {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  
+  .form {
+    margin-top: 20px;
+    gap: 12px;
+  }
+  
+  .select,
+  .input,
+  .button,
+  .cancelButton {
+    padding: 10px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  
+  .editBtn,
+  .deleteBtn {
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    margin: 15px 8px;
+    width: calc(100% - 16px);
+    padding: 12px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .title::before {
+    font-size: 18px;
+  }
+  
+  .select,
+  .input,
+  .button,
+  .cancelButton {
+    padding: 8px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 6px 8px;
+  }
+}
+
+/* Prevent zoom on input focus for iOS devices */
+@media (max-width: 768px) {
+  .select,
+  .input {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Print styles */
+@media print {
+  .container {
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .button,
+  .cancelButton,
+  .editBtn,
+  .deleteBtn {
+    display: none;
+  }
+}

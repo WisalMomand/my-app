@@ -1,0 +1,68 @@
+.form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+input, button {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .form {
+    margin: 15px auto;
+    gap: 12px;
+    padding: 0 10px;
+  }
+  
+  input, button {
+    padding: 12px; /* Slightly larger for touch devices */
+    font-size: 16px; /* Maintain font size to prevent zoom on iOS */
+  }
+}
+
+@media (max-width: 360px) {
+  .form {
+    margin: 10px auto;
+    gap: 10px;
+  }
+  
+  input, button {
+    padding: 10px;
+  }
+}
+
+/* Prevent zoom on input focus for iOS devices */
+@media (max-width: 480px) {
+  input {
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* Ensure proper appearance on very small screens */
+@media (max-width: 320px) {
+  .form {
+    padding: 0 8px;
+  }
+  
+  input, button {
+    padding: 8px 10px;
+  }
+}
