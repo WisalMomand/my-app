@@ -156,15 +156,8 @@ const RandomQuizForm = () => {
         onChange={(e) => setTitle(e.target.value)}
         required
       />
-
-      <select value={subject} onChange={(e) => setSubject(e.target.value)} required>
-        <option value="">-- Select Subject --</option>
-        {subjects.map((subj) => (
-          <option key={subj} value={subj}>{subj}</option>
-        ))}
-      </select>
-
-      <select value={semester} onChange={(e) => setSemester(e.target.value)} required>
+       
+<select value={semester} onChange={(e) => setSemester(e.target.value)} required>
         <option value="">-- Select Semester --</option>
         {semesters.map((sem) => (
           <option key={sem} value={sem}>{sem}</option>
@@ -178,14 +171,14 @@ const RandomQuizForm = () => {
         ))}
       </select>
 
-      <input
-        type="date"
-        value={deadline}
-        onChange={(e) => setDeadline(e.target.value)}
-        required
-      />
+      <select value={subject} onChange={(e) => setSubject(e.target.value)} required>
+        <option value="">-- Select Subject --</option>
+        {subjects.map((subj) => (
+          <option key={subj} value={subj}>{subj}</option>
+        ))}
+      </select>
 
-      <input
+       <input
         type="number"
         placeholder="Number of MCQs"
         value={numberOfMcqs}
@@ -202,6 +195,15 @@ const RandomQuizForm = () => {
         required
         min={1}
       />
+
+      <input
+        type="date"
+        value={deadline}
+        onChange={(e) => setDeadline(e.target.value)}
+        required
+      />
+
+     
 
       {/* ✅ PDF Download Button */}
       <button

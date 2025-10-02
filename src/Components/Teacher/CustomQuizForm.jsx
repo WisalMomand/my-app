@@ -174,16 +174,7 @@ const CustomQuizForm = () => {
         onChange={(e) => setTitle(e.target.value)}
         required
       />
-
-      <select value={subject} onChange={(e) => setSubject(e.target.value)} required>
-        <option value="">-- Select Subject --</option>
-        {subjects.map((subj) => (
-          <option key={subj} value={subj}>
-            {subj}
-          </option>
-        ))}
-      </select>
-
+      
       <select value={semester} onChange={(e) => setSemester(e.target.value)} required>
         <option value="">-- Select Semester --</option>
         {semesters.map((sem) => (
@@ -202,12 +193,15 @@ const CustomQuizForm = () => {
         ))}
       </select>
 
-      <input
-        type="date"
-        value={deadline}
-        onChange={(e) => setDeadline(e.target.value)}
-        required
-      />
+      <select value={subject} onChange={(e) => setSubject(e.target.value)} required>
+        <option value="">-- Select Subject --</option>
+        {subjects.map((subj) => (
+          <option key={subj} value={subj}>
+            {subj}
+          </option>
+        ))}
+      </select>
+
 
       <input
         type="number"
@@ -225,6 +219,15 @@ const CustomQuizForm = () => {
         onChange={(e) => setTimePerMcq(e.target.value)}
         required
         min={1}
+      />
+
+      
+
+      <input
+        type="date"
+        value={deadline}
+        onChange={(e) => setDeadline(e.target.value)}
+        required
       />
 
       <div className={styles.mcqList}>

@@ -128,7 +128,7 @@ const Login = () => {
       <div className={styles.loginContainer}>
         <h2>
           Sign in to <br />
-          <strong>Generate Quiz</strong>
+          <strong>Quiz Maker</strong>
         </h2>
         <p>
           Don't have an account? <Link to="/register">Register</Link>
