@@ -1,4 +1,4 @@
-
+/* === Center Wrapper === */
 .centerWrapper {
   display: flex;
   justify-content: center;
@@ -10,7 +10,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  backdrop-filter: blur(3px);
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -18,9 +17,10 @@
   right: 0;
   bottom: 0;
   overflow: auto;
+  /* ❌ Removed backdrop-filter from here to fix input text visibility on mobile */
 }
 
-
+/* === Overlay with Blur === */
 .centerWrapper::before {
   content: '';
   position: absolute;
@@ -29,9 +29,11 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);     /* ✅ Blur applied to overlay instead */
   z-index: 0;
 }
 
+/* === Login Form Container === */
 .loginContainer {
   width: 100%;
   max-width: 400px;
@@ -43,10 +45,10 @@
   flex-direction: column;
   margin: auto;
   position: relative;
-  z-index: 1;
+  z-index: 2;        /* ✅ Ensures form is above overlay */
 }
 
-
+/* === Text Styles === */
 .loginContainer h2 {
   text-align: center;
   margin-bottom: 10px;
@@ -68,7 +70,7 @@
   font-weight: 500;
 }
 
-
+/* === Labels === */
 .loginContainer label {
   font-weight: 600;
   display: block;
@@ -77,7 +79,7 @@
   color: #333;
 }
 
-
+/* === Inputs === */
 .loginContainer input {
   width: 100%;
   padding: 14px;
@@ -87,6 +89,9 @@
   margin-bottom: 15px;
   outline: none;
   transition: border 0.3s ease;
+  background-color: #fff;            /* ✅ Solid background */
+  color: #000;                        /* ✅ Visible text color */
+  -webkit-text-fill-color: #000;      /* ✅ Fix for iOS Safari */
 }
 
 .loginContainer input:focus {
@@ -94,7 +99,7 @@
   box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
 }
 
-
+/* === Button === */
 .loginButton {
   width: 100%;
   padding: 14px;
@@ -114,7 +119,7 @@
   transform: translateY(-1px);
 }
 
-
+/* === Forgot Password Link === */
 .forgot {
   display: block;
   text-align: center;
@@ -124,7 +129,7 @@
   margin: 15px 0;
 }
 
-
+/* === Error Box === */
 .error {
   background-color: #ffe5e5;
   color: red;
@@ -134,7 +139,7 @@
   border: 1px solid red;
 }
 
-/* Media Quries*/
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .loginContainer {
     padding: 30px;
@@ -199,7 +204,6 @@
   }
 }
 
-
 @media (max-width: 360px) {
   .loginContainer {
     padding: 20px 15px;
@@ -229,14 +233,6 @@
   }
 }
 
-
-@media (max-width: 480px) {
-  .loginContainer input {
-    font-size: 16px; 
-  }
-}
-
-
 @media (max-height: 600px) and (max-width: 480px) {
   .centerWrapper {
     align-items: flex-start;
@@ -244,3 +240,4 @@
     padding-bottom: 30px;
   }
 }
+
